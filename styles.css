@@ -198,9 +198,11 @@ img { max-width: 100%; display: block; }
 /* Partners */
 .partners { display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; align-items: center; }
 .partner-chip {
-  padding: 16px 28px; border: 1px solid var(--line); border-radius: 8px;
-  color: var(--gray); font-weight: 700; background: #fff;
+  display: flex; flex-direction: column; align-items: center; gap: 14px;
+  padding: 22px 28px; border: 1px solid var(--line); border-radius: 8px;
+  color: var(--gray); font-weight: 700; background: #fff; text-align: center;
 }
+.partner-logo { height: 64px; width: auto; max-width: 180px; object-fit: contain; }
 
 /* Footer */
 .site-footer { background: var(--bg-dark); color: rgba(255,255,255,.72); padding: 56px 0 28px; }
