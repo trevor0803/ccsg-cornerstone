@@ -9,6 +9,22 @@
     });
   }
 
+
+  // Project filters
+  var fbtns = document.querySelectorAll(".filter-btn");
+  if (fbtns.length) {
+    fbtns.forEach(function (b) {
+      b.addEventListener("click", function () {
+        fbtns.forEach(function (x) { x.classList.remove("active"); });
+        b.classList.add("active");
+        var f = b.getAttribute("data-filter");
+        document.querySelectorAll(".proj-grid .proj-card").forEach(function (c) {
+          c.hidden = !(f === "all" || c.getAttribute("data-cat") === f);
+        });
+      });
+    });
+  }
+
   // Contact form (mailto fallback; set FORM_ENDPOINT to capture in a dashboard)
   var FORM_ENDPOINT = ""; // e.g. Formspree or LeadConnector form action URL
   var RECIPIENT = "mark@ccsg.com";

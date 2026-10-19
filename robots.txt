@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ccsg-site.vercel.app/sitemap.xml
