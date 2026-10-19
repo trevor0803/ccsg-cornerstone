@@ -282,3 +282,9 @@ img { max-width: 100%; display: block; }
 .gallery-toggle:hover { background: var(--black); color: #fff; border-color: var(--black); }
 @media (max-width: 900px) { .gallery { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 600px) { .gallery { grid-template-columns: repeat(2, 1fr); gap: 10px; } }
+
+/* Logo image */
+.brand .logo { height: 58px; width: auto; display: block; }
+.footer-logo { background: #fff; padding: 10px 14px; border-radius: 8px; display: inline-flex; }
+.footer-logo .logo { height: 64px; }
+@media (max-width: 600px) { .brand .logo { height: 44px; } }
