@@ -79,3 +79,16 @@
   var y = document.getElementById("year");
   if (y) y.textContent = "2026";
 })();
+
+// Project pages: "View all photos" expander
+document.querySelectorAll('.gallery-toggle').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var box = document.getElementById(btn.getAttribute('aria-controls'));
+    if (!box) return;
+    var open = box.hasAttribute('hidden');
+    if (open) { box.removeAttribute('hidden'); } else { box.setAttribute('hidden', ''); }
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.textContent = open ? btn.dataset.less : btn.dataset.more;
+    if (!open) btn.scrollIntoView({ block: 'center' });
+  });
+});

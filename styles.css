@@ -273,3 +273,12 @@ img { max-width: 100%; display: block; }
   background-size: cover; background-position: center 70%;
 }
 @media (max-width: 700px) { .hero.hero-photo { background-image: linear-gradient(rgba(18,18,18,.8), rgba(18,18,18,.8)), url('/assets/projects/gulf-blvd-icf-home/01.webp'); } }
+
+/* Project gallery: 4 columns (3 rows of 12 by default), expandable full set */
+.gallery { grid-template-columns: repeat(4, 1fr); }
+.gallery[hidden] { display: none; }
+.gallery-more { margin-top: 14px; }
+.gallery-toggle { color: var(--black); border-color: var(--black); cursor: pointer; font-family: inherit; }
+.gallery-toggle:hover { background: var(--black); color: #fff; border-color: var(--black); }
+@media (max-width: 900px) { .gallery { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 600px) { .gallery { grid-template-columns: repeat(2, 1fr); gap: 10px; } }
